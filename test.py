@@ -1,0 +1,17 @@
+name: workflow demo2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+
+      - name: run test.py
+        run: python test.py
