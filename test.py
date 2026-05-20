@@ -1,17 +1,10 @@
-name: workflow demo2
+import pandas as pd
 
-on:
-  push:
-    branches:
-      - main
+data = {
+      "name" : ["A", "B"],
+      "age" : [10, 20]
+ }
 
-jobs:
-  job1:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: checkout code
-        uses: actions/checkout@v2
-
-      - name: run test.py
-        run: python test.py
+df = pd.Dataframe(data)
+ 
+print(df)
